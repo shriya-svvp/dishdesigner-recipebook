@@ -59,7 +59,7 @@
         "Add cream, spices, and paneer cubes. Simmer for 10 minutes.",
         "Garnish with coriander and serve hot with naan or rice."
       ],
-      "image": "https://www.cookwithmanali.com/wp-content/uploads/2016/03/Paneer-Butter-Masala.jpg"
+      "image": "images/veg/paneer-butter-masala.jpg"
     },
     {
       "id": "2",
@@ -85,7 +85,7 @@
         "Add 2 cups water, salt, and pressure cook for 2 whistles.",
         "Fluff with fork and serve hot with raita."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/veg-pulao.jpg"
+      "image": "images/veg/vegetable-puloa.jpg"
     },
     {
       "id": "3",
@@ -111,7 +111,7 @@
         "Cover tightly and cook on low flame (dum) for 20–25 mins.",
         "Mix gently and serve hot with raita."
       ],
-      "image": "https://www.cookwithkushi.com/wp-content/uploads/2022/03/chicken_biryani.jpg"
+      "image": "images/nonveg/chicken-biryani.jpg"
     },
     {
       "id": "4",
@@ -138,7 +138,7 @@
         "Add marinated fish pieces, cook for 10–12 minutes until done.",
         "Serve hot with steamed rice."
       ],
-      "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/fish-curry.jpg"
+      "image": "images/nonveg/fish-curry.jpg"
     },
 
     {
@@ -163,7 +163,7 @@
         "Cover and cook until vegetables are tender.",
         "Serve hot with chapati."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/aloo-gobi.jpg"
+      "image": "images/veg/aloo-gobi.jpg"
     },
     {
       "id": "6",
@@ -186,7 +186,7 @@
         "Add chickpeas and simmer for 15 minutes.",
         "Garnish with coriander and serve with bhature."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chole-bhature.jpg"
+      "image": "images/veg/chole.jpg"
     },
     {
       "id": "7",
@@ -208,7 +208,7 @@
         "Mix into dal and simmer for 5 minutes.",
         "Serve with rice or roti."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/masoor-dal.jpg"
+      "image": "images/veg/masoor-dal.jpg"
     },
     {
       "id": "8",
@@ -231,7 +231,7 @@
         "Add spinach puree and paneer cubes.",
         "Simmer for 10 minutes and serve."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/palak-paneer.jpg"
+      "image": "images/veg/palak-paneer.jpg"
     },
     {
       "id": "9",
@@ -255,7 +255,7 @@
         "Add sauces and noodles, toss well.",
         "Serve hot."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/hakka-noodles.jpg"
+      "image": "images/veg/veg-noodles.jpg"
     },
     {
       "id": "10",
@@ -278,7 +278,7 @@
         "Add fried balls into sauce, cook for 5 mins.",
         "Serve hot with fried rice."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/veg-manchurian.jpg"
+      "image": "images/veg/veg machurian.jpg"
     },
 
     {
@@ -301,7 +301,7 @@
         "Simmer with water for 45 mins until tender.",
         "Serve hot with naan."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/mutton-rogan-josh.jpg"
+      "image": "images/nonveg/mutton.jpg"
     },
     {
       "id": "12",
@@ -323,7 +323,7 @@
         "Add eggs and simmer for 10 mins.",
         "Serve with rice or roti."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/egg-curry.jpg"
+      "image": "images/nonveg/egg.jpg"
     },
     {
       "id": "13",
@@ -345,7 +345,7 @@
         "Add prawns and cook for 10 mins.",
         "Serve with rice."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/prawn-masala.jpg"
+      "image": "images/nonveg/prawn-masala.jpg"
     },
     {
       "id": "14",
@@ -368,7 +368,7 @@
         "Simmer for 20 mins.",
         "Serve with paratha."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/keema-curry.jpg"
+      "image": "images/nonveg/keema.jpg"
     },
     {
       "id": "15",
@@ -392,7 +392,7 @@
         "Prepare tomato-onion gravy, add butter & cream.",
         "Mix chicken pieces and simmer for 20 mins."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/butter-chicken.jpg"
+      "image": "images/nonveg/butter-chicken.jpg"
     },
     {
       "id": "16",
@@ -413,92 +413,7 @@
         "Cook in oven/tandoor until charred.",
         "Serve with mint chutney."
       ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/tandoori-chicken.jpg"
-    },
-    {
-      "id": "17",
-      "name": "Chicken Curry",
-      "type": "Non-Vegetarian",
-      "prepTime": "15 mins",
-      "cookTime": "35 mins",
-      "servings": "4",
-      "difficulty": "Medium",
-      "ingredients": [
-        "500g Chicken",
-        "2 Onions (chopped)",
-        "2 Tomatoes (chopped)",
-        "Spices (turmeric, chili powder, garam masala, salt)"
-      ],
-      "instructions": [
-        "Sauté onions, add tomatoes and spices.",
-        "Add chicken and water, simmer until cooked.",
-        "Serve with rice."
-      ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chicken-curry.jpg"
-    },
-    {
-      "id": "18",
-      "name": "Fish Fry",
-      "type": "Non-Vegetarian",
-      "prepTime": "15 mins",
-      "cookTime": "15 mins",
-      "servings": "3",
-      "difficulty": "Easy",
-      "ingredients": [
-        "500g Fish",
-        "Lemon juice",
-        "Spices (chili powder, turmeric, salt)"
-      ],
-      "instructions": [
-        "Marinate fish with spices and lemon juice.",
-        "Shallow fry until golden brown.",
-        "Serve with onion rings."
-      ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/fish-fry.jpg"
-    },
-    {
-      "id": "19",
-      "name": "Chicken 65",
-      "type": "Non-Vegetarian",
-      "prepTime": "20 mins",
-      "cookTime": "25 mins",
-      "servings": "4",
-      "difficulty": "Medium",
-      "ingredients": [
-        "500g Chicken (boneless cubes)",
-        "Yogurt",
-        "Cornflour",
-        "Spices (red chili, turmeric, garam masala, salt)"
-      ],
-      "instructions": [
-        "Marinate chicken with yogurt, cornflour, and spices.",
-        "Deep fry until crispy.",
-        "Serve with lemon wedges."
-      ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chicken-65.jpg"
-    },
-    {
-      "id": "20",
-      "name": "Crab Curry",
-      "type": "Non-Vegetarian",
-      "prepTime": "30 mins",
-      "cookTime": "40 mins",
-      "servings": "4",
-      "difficulty": "Hard",
-      "ingredients": [
-        "500g Crab",
-        "2 Onions (chopped)",
-        "2 Tomatoes (chopped)",
-        "Coconut milk",
-        "Spices (chili powder, turmeric, coriander, salt)"
-      ],
-      "instructions": [
-        "Clean crab and marinate with spices.",
-        "Prepare onion-tomato masala, add coconut milk.",
-        "Add crab and cook until tender.",
-        "Serve with steamed rice."
-      ],
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/crab-curry.jpg"
+      "image": "images/nonveg/tandoori-chicken.jpg"
     }
   ]
 }
