@@ -1,0 +1,504 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "username": "john",
+      "password": "john123",
+      "role": "user"
+    },
+    {
+      "id": "4f81",
+      "username": "divya",
+      "email": "divya@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "b002",
+      "username": "sandeep",
+      "email": "sandeep@gmail.com",
+      "password": "sandy123",
+      "role": "admin"
+    },
+    {
+      "id": "cadd",
+      "username": "keerthi",
+      "email": "keerthi@gmail.com",
+      "password": "keerthi123",
+      "role": "user"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Paneer Butter Masala",
+      "type": "Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "30 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "200g Paneer",
+        "2 Tomatoes (pureed)",
+        "1 Onion (chopped)",
+        "2 tbsp Cream",
+        "2 tbsp Butter",
+        "Spices (turmeric, garam masala, chili powder, salt)"
+      ],
+      "instructions": [
+        "Chop onions, tomatoes, and prepare spices.",
+        "Heat butter in a pan and sauté onions until golden brown.",
+        "Add tomato puree and cook until oil separates.",
+        "Blend mixture into a smooth gravy and return to pan.",
+        "Add cream, spices, and paneer cubes. Simmer for 10 minutes.",
+        "Garnish with coriander and serve hot with naan or rice."
+      ],
+      "image": "https://www.cookwithmanali.com/wp-content/uploads/2016/03/Paneer-Butter-Masala.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Vegetable Pulao",
+      "type": "Vegetarian",
+      "prepTime": "10 mins",
+      "cookTime": "25 mins",
+      "servings": "3",
+      "difficulty": "Easy",
+      "ingredients": [
+        "1 cup Basmati Rice",
+        "1 Carrot (chopped)",
+        "1/2 cup Peas",
+        "1/2 cup Beans (chopped)",
+        "Whole spices (bay leaf, cloves, cardamom, cinnamon)",
+        "1 Onion (sliced)"
+      ],
+      "instructions": [
+        "Wash and soak rice for 20 minutes.",
+        "Heat ghee/oil in a cooker, add whole spices and sauté.",
+        "Add onion, sauté till golden, then add vegetables.",
+        "Mix rice and sauté for 2 minutes.",
+        "Add 2 cups water, salt, and pressure cook for 2 whistles.",
+        "Fluff with fork and serve hot with raita."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/veg-pulao.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Chicken Biryani",
+      "type": "Non-Vegetarian",
+      "prepTime": "30 mins",
+      "cookTime": "45 mins",
+      "servings": "5",
+      "difficulty": "Hard",
+      "ingredients": [
+        "500g Chicken (marinated with yogurt & spices)",
+        "2 cups Basmati Rice",
+        "2 Onions (fried)",
+        "Whole spices (cloves, cardamom, cinnamon, bay leaf)",
+        "Saffron milk",
+        "Fresh coriander & mint leaves"
+      ],
+      "instructions": [
+        "Marinate chicken with yogurt, ginger-garlic paste, and spices for at least 30 mins.",
+        "Cook rice with whole spices until 70% done.",
+        "In a deep pan, layer chicken at bottom, then half-cooked rice.",
+        "Add fried onions, mint, coriander, and saffron milk.",
+        "Cover tightly and cook on low flame (dum) for 20–25 mins.",
+        "Mix gently and serve hot with raita."
+      ],
+      "image": "https://www.cookwithkushi.com/wp-content/uploads/2022/03/chicken_biryani.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Fish Curry",
+      "type": "Non-Vegetarian",
+      "prepTime": "20 mins",
+      "cookTime": "30 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "500g Fish (cut into pieces)",
+        "1 cup Coconut Milk",
+        "2 tbsp Tamarind Paste",
+        "2 Onions (chopped)",
+        "2 Tomatoes (chopped)",
+        "Spices (turmeric, chili powder, coriander powder, salt)"
+      ],
+      "instructions": [
+        "Marinate fish pieces with turmeric and salt, set aside.",
+        "Heat oil in a pan, sauté onions until golden.",
+        "Add tomatoes and cook until soft.",
+        "Add spices and tamarind paste, stir well.",
+        "Pour in coconut milk and simmer gently.",
+        "Add marinated fish pieces, cook for 10–12 minutes until done.",
+        "Serve hot with steamed rice."
+      ],
+      "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/fish-curry.jpg"
+    },
+
+    {
+      "id": "5",
+      "name": "Aloo Gobi",
+      "type": "Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "25 mins",
+      "servings": "3",
+      "difficulty": "Easy",
+      "ingredients": [
+        "2 Potatoes (cubed)",
+        "1 Cauliflower (florets)",
+        "1 Onion (chopped)",
+        "2 Tomatoes (chopped)",
+        "Spices (turmeric, chili powder, garam masala, salt)"
+      ],
+      "instructions": [
+        "Heat oil and sauté onions.",
+        "Add tomatoes and spices, cook until soft.",
+        "Add potatoes and cauliflower, stir well.",
+        "Cover and cook until vegetables are tender.",
+        "Serve hot with chapati."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/aloo-gobi.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Chole (Chickpea Curry)",
+      "type": "Vegetarian",
+      "prepTime": "20 mins",
+      "cookTime": "40 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "2 cups Chickpeas (soaked overnight)",
+        "2 Onions (chopped)",
+        "2 Tomatoes (pureed)",
+        "Spices (chole masala, chili powder, turmeric, salt)",
+        "Fresh coriander"
+      ],
+      "instructions": [
+        "Boil soaked chickpeas until soft.",
+        "Sauté onions, then add tomato puree and spices.",
+        "Add chickpeas and simmer for 15 minutes.",
+        "Garnish with coriander and serve with bhature."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chole-bhature.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Masoor Dal",
+      "type": "Vegetarian",
+      "prepTime": "10 mins",
+      "cookTime": "25 mins",
+      "servings": "4",
+      "difficulty": "Easy",
+      "ingredients": [
+        "1 cup Masoor Dal (red lentils)",
+        "1 Onion (chopped)",
+        "1 Tomato (chopped)",
+        "Spices (turmeric, cumin, chili powder, salt)"
+      ],
+      "instructions": [
+        "Boil dal with turmeric until soft.",
+        "Prepare tempering with onions, tomatoes, and spices.",
+        "Mix into dal and simmer for 5 minutes.",
+        "Serve with rice or roti."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/masoor-dal.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Palak Paneer",
+      "type": "Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "30 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "200g Paneer (cubes)",
+        "2 cups Spinach (blanched & pureed)",
+        "1 Onion (chopped)",
+        "1 Tomato (chopped)",
+        "Spices (turmeric, chili powder, garam masala, salt)"
+      ],
+      "instructions": [
+        "Blanch spinach, blend into puree.",
+        "Sauté onions and tomatoes with spices.",
+        "Add spinach puree and paneer cubes.",
+        "Simmer for 10 minutes and serve."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/palak-paneer.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Veg Hakka Noodles",
+      "type": "Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "20 mins",
+      "servings": "2",
+      "difficulty": "Easy",
+      "ingredients": [
+        "200g Noodles",
+        "1 Carrot (julienned)",
+        "1 Capsicum (sliced)",
+        "1 Onion (sliced)",
+        "2 tbsp Soy Sauce",
+        "1 tbsp Chili Sauce"
+      ],
+      "instructions": [
+        "Boil noodles and drain.",
+        "Stir-fry vegetables in oil.",
+        "Add sauces and noodles, toss well.",
+        "Serve hot."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/hakka-noodles.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Veg Manchurian",
+      "type": "Vegetarian",
+      "prepTime": "25 mins",
+      "cookTime": "30 mins",
+      "servings": "3",
+      "difficulty": "Medium",
+      "ingredients": [
+        "2 cups Mixed Vegetables (grated)",
+        "2 tbsp Cornflour",
+        "2 tbsp Soy Sauce",
+        "1 Onion (sliced)",
+        "1 Capsicum (sliced)"
+      ],
+      "instructions": [
+        "Mix grated vegetables with cornflour, shape balls, and fry.",
+        "Prepare sauce with onions, capsicum, and soy sauce.",
+        "Add fried balls into sauce, cook for 5 mins.",
+        "Serve hot with fried rice."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/veg-manchurian.jpg"
+    },
+
+    {
+      "id": "11",
+      "name": "Mutton Rogan Josh",
+      "type": "Non-Vegetarian",
+      "prepTime": "25 mins",
+      "cookTime": "1 hr",
+      "servings": "5",
+      "difficulty": "Hard",
+      "ingredients": [
+        "500g Mutton",
+        "2 Onions (sliced)",
+        "2 Tomatoes (chopped)",
+        "Spices (kashmiri chili, turmeric, garam masala, fennel)"
+      ],
+      "instructions": [
+        "Marinate mutton with spices.",
+        "Cook onions and tomatoes, add mutton.",
+        "Simmer with water for 45 mins until tender.",
+        "Serve hot with naan."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/mutton-rogan-josh.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Egg Curry",
+      "type": "Non-Vegetarian",
+      "prepTime": "10 mins",
+      "cookTime": "20 mins",
+      "servings": "3",
+      "difficulty": "Easy",
+      "ingredients": [
+        "4 Boiled Eggs",
+        "2 Onions (chopped)",
+        "2 Tomatoes (chopped)",
+        "Spices (turmeric, chili powder, garam masala, salt)"
+      ],
+      "instructions": [
+        "Fry boiled eggs lightly.",
+        "Prepare onion-tomato gravy with spices.",
+        "Add eggs and simmer for 10 mins.",
+        "Serve with rice or roti."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/egg-curry.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Prawn Masala",
+      "type": "Non-Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "20 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "400g Prawns",
+        "2 Onions (chopped)",
+        "2 Tomatoes (chopped)",
+        "Spices (turmeric, chili powder, coriander, salt)"
+      ],
+      "instructions": [
+        "Marinate prawns with turmeric and salt.",
+        "Sauté onions and tomatoes with spices.",
+        "Add prawns and cook for 10 mins.",
+        "Serve with rice."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/prawn-masala.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Keema Curry",
+      "type": "Non-Vegetarian",
+      "prepTime": "20 mins",
+      "cookTime": "40 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "500g Minced Mutton/Chicken",
+        "2 Onions (chopped)",
+        "2 Tomatoes (chopped)",
+        "Green peas",
+        "Spices (garam masala, chili powder, turmeric, salt)"
+      ],
+      "instructions": [
+        "Cook onions and tomatoes with spices.",
+        "Add minced meat and peas.",
+        "Simmer for 20 mins.",
+        "Serve with paratha."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/keema-curry.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Butter Chicken",
+      "type": "Non-Vegetarian",
+      "prepTime": "30 mins",
+      "cookTime": "45 mins",
+      "servings": "4",
+      "difficulty": "Hard",
+      "ingredients": [
+        "500g Chicken (boneless)",
+        "2 Tomatoes (pureed)",
+        "1 Onion (chopped)",
+        "2 tbsp Cream",
+        "2 tbsp Butter",
+        "Spices (garam masala, chili powder, turmeric, salt)"
+      ],
+      "instructions": [
+        "Marinate chicken in yogurt and spices.",
+        "Grill chicken until half cooked.",
+        "Prepare tomato-onion gravy, add butter & cream.",
+        "Mix chicken pieces and simmer for 20 mins."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/butter-chicken.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Tandoori Chicken",
+      "type": "Non-Vegetarian",
+      "prepTime": "20 mins",
+      "cookTime": "40 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "500g Chicken (with bone)",
+        "Yogurt",
+        "Lemon juice",
+        "Spices (red chili, garam masala, turmeric, salt)"
+      ],
+      "instructions": [
+        "Marinate chicken with yogurt, lemon, and spices.",
+        "Cook in oven/tandoor until charred.",
+        "Serve with mint chutney."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/tandoori-chicken.jpg"
+    },
+    {
+      "id": "17",
+      "name": "Chicken Curry",
+      "type": "Non-Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "35 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "500g Chicken",
+        "2 Onions (chopped)",
+        "2 Tomatoes (chopped)",
+        "Spices (turmeric, chili powder, garam masala, salt)"
+      ],
+      "instructions": [
+        "Sauté onions, add tomatoes and spices.",
+        "Add chicken and water, simmer until cooked.",
+        "Serve with rice."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chicken-curry.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Fish Fry",
+      "type": "Non-Vegetarian",
+      "prepTime": "15 mins",
+      "cookTime": "15 mins",
+      "servings": "3",
+      "difficulty": "Easy",
+      "ingredients": [
+        "500g Fish",
+        "Lemon juice",
+        "Spices (chili powder, turmeric, salt)"
+      ],
+      "instructions": [
+        "Marinate fish with spices and lemon juice.",
+        "Shallow fry until golden brown.",
+        "Serve with onion rings."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/fish-fry.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Chicken 65",
+      "type": "Non-Vegetarian",
+      "prepTime": "20 mins",
+      "cookTime": "25 mins",
+      "servings": "4",
+      "difficulty": "Medium",
+      "ingredients": [
+        "500g Chicken (boneless cubes)",
+        "Yogurt",
+        "Cornflour",
+        "Spices (red chili, turmeric, garam masala, salt)"
+      ],
+      "instructions": [
+        "Marinate chicken with yogurt, cornflour, and spices.",
+        "Deep fry until crispy.",
+        "Serve with lemon wedges."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chicken-65.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Crab Curry",
+      "type": "Non-Vegetarian",
+      "prepTime": "30 mins",
+      "cookTime": "40 mins",
+      "servings": "4",
+      "difficulty": "Hard",
+      "ingredients": [
+        "500g Crab",
+        "2 Onions (chopped)",
+        "2 Tomatoes (chopped)",
+        "Coconut milk",
+        "Spices (chili powder, turmeric, coriander, salt)"
+      ],
+      "instructions": [
+        "Clean crab and marinate with spices.",
+        "Prepare onion-tomato masala, add coconut milk.",
+        "Add crab and cook until tender.",
+        "Serve with steamed rice."
+      ],
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/crab-curry.jpg"
+    }
+  ]
+}

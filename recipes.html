@@ -1,0 +1,249 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
+    header {
+      background: #fff7ef;
+      padding: 15px 50px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 { color: orange; margin: 0; }
+    nav a { margin: 0 15px; text-decoration: none; color: black; font-weight: 500; }
+    .search-box {
+      border: 2px solid orange;
+      border-radius: 20px;
+      padding: 5px 10px;
+      outline: none;
+    }
+    .container { padding: 20px 50px; }
+    .recipes { display: flex; gap: 20px; flex-wrap: wrap; }
+    .card {
+      background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px; text-align: center; width: 300px; cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+    .card .meta { font-size: 14px; color: #666; margin-top: 8px; }
+    .back-btn {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background: orange;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .back-btn:hover { background: darkorange; }
+
+    /* Modal */
+    .modal {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); justify-content: center; align-items: center;
+    }
+    .modal-content {
+      background: #fffdf8; padding: 25px; border-radius: 15px;
+      width: 650px; max-width: 95%; text-align: left; position: relative;
+      max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      border: 2px solid #f0d9b5;
+    }
+    .modal-content img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .close {
+      position: absolute; top: 10px; right: 15px; font-size: 22px; cursor: pointer; color: #333;
+    }
+    .modal-content h2 {
+      margin-top: 0;
+      font-family: Georgia, serif;
+      color: #d35400;
+      border-bottom: 2px solid #f3e2c7;
+      padding-bottom: 8px;
+    }
+
+    /* Meta badges */
+    .meta-container {
+      display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0 20px 0;
+    }
+    .badge {
+      background: #ffe6cc;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Section blocks */
+    .modal-section {
+      margin: 15px 0;
+      padding: 12px 15px;
+      background: #fffaf0;
+      border-left: 4px solid orange;
+      border-radius: 8px;
+    }
+    .modal-section h3 {
+      margin-top: 0;
+      color: #e67e22;
+    }
+    ul li, ol li { margin-bottom: 6px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dish Designer</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">AboutUs</a>
+      <a href="index,html#contact">Contact</a>
+    </nav>
+    <input type="text" id="searchBox" placeholder="Search recipes..." class="search-box">
+  </header>
+
+  <div class="container">
+    <h2>Recipes</h2>
+    <button class="back-btn" onclick="window.location.href='categories.html'">⬅ Back to Dashboard</button>
+    <div class="recipes" id="recipes"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="">
+      <div class="meta-container">
+        <span class="badge">⏱ Prep: <span id="modalPrep"></span></span>
+        <span class="badge">🍳 Cook: <span id="modalCook"></span></span>
+        <span class="badge">👨‍👩‍👧 Servings: <span id="modalServings"></span></span>
+        <span class="badge">🎯 <span id="modalDifficulty"></span></span>
+      </div>
+      <div class="modal-section">
+        <h3>Ingredients:</h3>
+        <ul id="modalIngredients"></ul>
+      </div>
+      <div class="modal-section">
+        <h3>Instructions:</h3>
+        <ol id="modalInstructions"></ol>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // 🔐 Login guard
+  const loggedInUser = localStorage.getItem("loggedInUser");
+  if (!loggedInUser) {
+    alert("You must log in to view recipes!");
+    window.location.href = "index.html";
+  }
+
+  const recipesContainer = document.getElementById("recipes");
+  const modal = document.getElementById("recipeModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImage = document.getElementById("modalImage");
+  const modalIngredients = document.getElementById("modalIngredients");
+  const modalInstructions = document.getElementById("modalInstructions");
+  const modalPrep = document.getElementById("modalPrep");
+  const modalCook = document.getElementById("modalCook");
+  const modalServings = document.getElementById("modalServings");
+  const modalDifficulty = document.getElementById("modalDifficulty");
+  const searchBox = document.getElementById("searchBox");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get("type");
+  const initialSearch = urlParams.get("search") || "";
+
+  if (category) {
+    document.querySelector("h2").textContent = `${category} Recipes`;
+  } else {
+    document.querySelector("h2").textContent = "All Recipes";
+  }
+
+  async function fetchRecipes(query = "") {
+    let url = "http://localhost:3000/recipes";
+    if (category) {
+      url += `?type=${category}`;
+    }
+
+    const res = await fetch(url);
+    let data = await res.json();
+
+    if (query) {
+      const lowerQuery = query.toLowerCase();
+      data = data.filter(recipe =>
+        recipe.name.toLowerCase().includes(lowerQuery) ||
+        recipe.ingredients.some(ing => ing.toLowerCase().includes(lowerQuery))
+      );
+    }
+
+    displayRecipes(data);
+  }
+
+  function displayRecipes(recipes) {
+    recipesContainer.innerHTML = "";
+    if (recipes.length === 0) {
+      recipesContainer.innerHTML = "<p>No recipes found.</p>";
+      return;
+    }
+    recipes.forEach(recipe => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <h3>${recipe.name}</h3>
+        <p class="meta">⏱ ${recipe.prepTime} | 🍳 ${recipe.cookTime}</p>
+        <p class="meta">👨‍👩‍👧 Servings: ${recipe.servings} | 🎯 ${recipe.difficulty}</p>
+      `;
+      card.onclick = () => openModal(recipe);
+      recipesContainer.appendChild(card);
+    });
+  }
+
+  function openModal(recipe) {
+    modalTitle.textContent = recipe.name;
+    modalImage.src = recipe.image;
+    modalPrep.textContent = recipe.prepTime || "-";
+    modalCook.textContent = recipe.cookTime || "-";
+    modalServings.textContent = recipe.servings || "-";
+    modalDifficulty.textContent = recipe.difficulty || "-";
+    modalIngredients.innerHTML = recipe.ingredients.map(i => `<li>${i}</li>`).join("");
+    
+    if (Array.isArray(recipe.instructions)) {
+      modalInstructions.innerHTML = recipe.instructions.map(step => `<li>${step}</li>`).join("");
+    } else {
+      modalInstructions.innerHTML = `<li>${recipe.instructions}</li>`;
+    }
+
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = (e) => {
+    if (e.target === modal) closeModal();
+  };
+
+  searchBox.addEventListener("input", function () {
+    fetchRecipes(searchBox.value.trim());
+  });
+
+  if (initialSearch) {
+    searchBox.value = initialSearch;
+    fetchRecipes(initialSearch);
+  } else {
+    fetchRecipes();
+  }
+</script>
+
+</body>
+</html>
