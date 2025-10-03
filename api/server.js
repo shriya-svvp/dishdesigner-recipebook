@@ -5,15 +5,20 @@ const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "../db.json"));
 const middlewares = jsonServer.defaults();
 
+// Middlewares
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
-server.use(router);
 
-// ✅ Use environment PORT (Vercel sets this) or fallback to 3000 locally
-const PORT = process.env.PORT || 3000;
+// Prefix all routes with /api
+server.use("/api", router);
 
-server.listen(PORT, () => {
-  console.log(`✅ JSON Server is running on http://localhost:${PORT}`);
-});
-
+// Export for Vercel
 module.exports = server;
+
+// ✅ Start server locally if not in Vercel
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, () => {
+    console.log(`✅ JSON Server is running on http://localhost:${PORT}`);
+  });
+}

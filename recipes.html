@@ -167,8 +167,8 @@
     document.querySelector("h2").textContent = "All Recipes";
   }
 
-  // ✅ Use your live backend URL
-  const BASE_URL = "https://dishdesigner-recipebook-tgoq.vercel.app/recipes";
+  // ✅ Use deployed API with /api prefix
+  const BASE_URL = "https://dishdesigner-recipebook-tgoq.vercel.app/api/recipes";
 
   async function fetchRecipes(query = "") {
     let url = BASE_URL;
