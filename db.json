@@ -80,7 +80,7 @@
         "Add cream, spices, and paneer cubes. Simmer for 10 minutes.",
         "Garnish with coriander and serve hot with naan or rice."
       ],
-      "image": "/images/veg/paneer-butter-masala.jpg"
+      "image": "/images/paneer-butter-masala.jpg"
     },
     {
       "id": "2",
@@ -106,7 +106,7 @@
         "Add 2 cups water, salt, and pressure cook for 2 whistles.",
         "Fluff with fork and serve hot with raita."
       ],
-      "image": "/images/veg/vegetable-pulao.jpg"
+      "image": "/images/vegetable-pulao.jpg"
     },
     {
       "id": "3",
@@ -132,7 +132,7 @@
         "Cover tightly and cook on low flame (dum) for 20–25 mins.",
         "Mix gently and serve hot with raita."
       ],
-      "image": "/images/nonveg/chicken-biryani.jpg"
+      "image": "/images/chicken-biryani.jpg"
     },
     {
       "id": "4",
@@ -159,7 +159,7 @@
         "Add marinated fish pieces, cook for 10–12 minutes until done.",
         "Serve hot with steamed rice."
       ],
-      "image": "/images/nonveg/fish-curry.jpg"
+      "image": "/images/fish-curry.jpg"
     },
     {
       "id": "5",
@@ -206,7 +206,7 @@
         "Add chickpeas and simmer for 15 minutes.",
         "Garnish with coriander and serve with bhature."
       ],
-      "image": "/images/veg/chole.jpg"
+      "image": "/images/chole.jpg"
     },
     {
       "id": "7",
@@ -228,7 +228,7 @@
         "Mix into dal and simmer for 5 minutes.",
         "Serve with rice or roti."
       ],
-      "image": "/images/veg/masoor-dal.jpg"
+      "image": "/images/masoor-dal.jpg"
     },
     {
       "id": "8",
@@ -251,7 +251,7 @@
         "Add spinach puree and paneer cubes.",
         "Simmer for 10 minutes and serve."
       ],
-      "image": "/images/veg/palak-paneer.jpg"
+      "image": "/images/palak-paneer.jpg"
     },
     {
       "id": "9",
@@ -275,7 +275,7 @@
         "Add sauces and noodles, toss well.",
         "Serve hot."
       ],
-      "image": "/images/veg/veg-noodles.jpg"
+      "image": "/images/veg-noodles.jpg"
     },
     {
       "id": "10",
@@ -298,7 +298,7 @@
         "Add fried balls into sauce, cook for 5 mins.",
         "Serve hot with fried rice."
       ],
-      "image": "/images/veg/veg-machurian.jpg"
+      "image": "/images/veg-machurian.jpg"
     },
     {
       "id": "11",
@@ -320,7 +320,7 @@
         "Simmer with water for 45 mins until tender.",
         "Serve hot with naan."
       ],
-      "image": "/images/nonveg/mutton.jpg"
+      "image": "/images/mutton.jpg"
     },
     {
       "id": "12",
@@ -342,7 +342,7 @@
         "Add eggs and simmer for 10 mins.",
         "Serve with rice or roti."
       ],
-      "image": "/images/nonveg/egg.jpg"
+      "image": "/images/egg.jpg"
     },
     {
       "id": "13",
@@ -364,7 +364,7 @@
         "Add prawns and cook for 10 mins.",
         "Serve with rice."
       ],
-      "image": "/images/nonveg/prawn-masala.jpg"
+      "image": "/images/prawn-masala.jpg"
     },
     {
       "id": "14",
@@ -387,7 +387,7 @@
         "Simmer for 20 mins.",
         "Serve with paratha."
       ],
-      "image": "/images/nonveg/keema.jpg"
+      "image": "/images/keema.jpg"
     },
     {
       "id": "15",
@@ -411,7 +411,7 @@
         "Prepare tomato-onion gravy, add butter & cream.",
         "Mix chicken pieces and simmer for 20 mins."
       ],
-      "image": "/images/nonveg/butter-chicken.jpg"
+      "image": "/images/butter-chicken.jpg"
     },
     {
       "id": "16",
@@ -432,7 +432,7 @@
         "Cook in oven/tandoor until charred.",
         "Serve with mint chutney."
       ],
-      "image": "/images/nonveg/tandoori-chicken.jpg"
+      "image": "/images/tandoori-chicken.jpg"
     }
   ]
 }
