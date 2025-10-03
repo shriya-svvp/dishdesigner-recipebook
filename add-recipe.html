@@ -109,7 +109,7 @@
   </div>
 
 <script>
-const API_URL = "http://localhost:3000/recipes";
+const API_URL = "https://dishdesigner-recipebook-tgoq.vercel.app/recipes";
 
 document.getElementById("recipeForm").addEventListener("submit", async function(e) {
   e.preventDefault();
@@ -137,6 +137,7 @@ document.getElementById("recipeForm").addEventListener("submit", async function(
     if (res.ok) {
       alert("✅ Recipe added successfully!");
       document.getElementById("recipeForm").reset();
+      window.location.href = "admin.html"; // redirect back to dashboard
     } else {
       alert("❌ Failed to add recipe.");
     }

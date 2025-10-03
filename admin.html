@@ -11,9 +11,7 @@
       padding: 15px 40px; background: #fff4eb; border-bottom: 2px solid #f5d6b3;
     }
     header h1 { color: orange; margin: 0; }
-    .search-container {
-      display: flex; align-items: center; gap: 10px;
-    }
+    .search-container { display: flex; align-items: center; gap: 10px; }
     .search-box {
       padding: 8px 12px;
       border: 2px solid orange;
@@ -22,53 +20,37 @@
       width: 220px;
     }
     .logout-btn {
-      padding: 8px 15px;
-      background: orange;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
+      padding: 8px 15px; background: orange; color: #fff; border: none;
+      border-radius: 6px; cursor: pointer; font-weight: bold;
     }
     .logout-btn:hover { background: darkorange; }
-
     .container { padding: 25px 50px; }
     .add-btn {
-      padding: 10px 20px;
-      background: orange; color: #fff; border: none;
+      padding: 10px 20px; background: orange; color: #fff; border: none;
       border-radius: 6px; font-weight: bold; cursor: pointer;
       margin-bottom: 20px;
     }
     .add-btn:hover { background: darkorange; }
-
     .recipe-list { margin-top: 20px; }
     .recipe-item {
       display: flex; align-items: center; justify-content: space-between;
       padding: 12px; border-bottom: 1px solid #ddd; background: #fff;
       border-radius: 8px; margin-bottom: 12px;
     }
-    .recipe-left {
-      display: flex; align-items: center; gap: 15px;
-    }
+    .recipe-left { display: flex; align-items: center; gap: 15px; }
     .recipe-left img {
       width: 60px; height: 60px; border-radius: 8px; object-fit: cover;
     }
     .recipe-left h3 { margin: 0; color: #333; }
-    .recipe-actions {
-      display: flex; gap: 10px;
-    }
+    .recipe-actions { display: flex; gap: 10px; }
     .btn {
-      padding: 6px 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
+      padding: 6px 14px; border: none; border-radius: 6px;
+      cursor: pointer; font-weight: bold;
     }
     .view-btn { background: orange; color: #fff; }
     .delete-btn { background: #ffa86a; color: #fff; }
     .view-btn:hover { background: darkorange; }
     .delete-btn:hover { background: #ff8c42; }
-
     /* Modal */
     .modal {
       display: none; position: fixed; top: 0; left: 0;
@@ -88,32 +70,20 @@
       font-size: 22px; cursor: pointer; color: #333;
     }
     .modal-content h2 {
-      margin-top: 0;
-      font-family: Georgia, serif;
-      color: #d35400;
-      border-bottom: 2px solid #f3e2c7;
-      padding-bottom: 8px;
+      margin-top: 0; font-family: Georgia, serif;
+      color: #d35400; border-bottom: 2px solid #f3e2c7; padding-bottom: 8px;
     }
     .meta-container {
       display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0 20px 0;
     }
     .badge {
-      background: #ffe6cc;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: bold;
-      color: #444;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+      background: #ffe6cc; padding: 6px 12px; border-radius: 20px;
+      font-size: 13px; font-weight: bold; color: #444;
+      display: flex; align-items: center; gap: 5px;
     }
     .modal-section {
-      margin: 15px 0;
-      padding: 12px 15px;
-      background: #fffaf0;
-      border-left: 4px solid orange;
-      border-radius: 8px;
+      margin: 15px 0; padding: 12px 15px; background: #fffaf0;
+      border-left: 4px solid orange; border-radius: 8px;
     }
     .modal-section h3 { margin-top: 0; color: #e67e22; }
   </style>
@@ -129,13 +99,11 @@
 
   <div class="container">
     <h2>Admin - Manage Recipes</h2>
-    <!-- Add Recipe Button -->
     <button class="add-btn" onclick="location.href='add-recipe.html'">+ Add Recipe</button>
-
     <div class="recipe-list" id="recipes"></div>
   </div>
 
-  <!-- Recipe View Modal -->
+  <!-- Modal -->
   <div class="modal" id="recipeModal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -159,6 +127,7 @@
   </div>
 
   <script>
+    const BASE_URL = "https://dishdesigner-recipebook-tgoq.vercel.app"; 
     const recipesContainer = document.getElementById("recipes");
     const modal = document.getElementById("recipeModal");
     const modalTitle = document.getElementById("modalTitle");
@@ -172,18 +141,20 @@
     const searchBox = document.getElementById("searchBox");
 
     async function fetchRecipes(query = "") {
-      let url = "http://localhost:3000/recipes"; 
-      const res = await fetch(url);
-      let data = await res.json();
-
-      if (query) {
-        const lowerQuery = query.toLowerCase();
-        data = data.filter(recipe =>
-          recipe.name.toLowerCase().includes(lowerQuery) ||
-          recipe.ingredients.some(ing => ing.toLowerCase().includes(lowerQuery))
-        );
+      try {
+        const res = await fetch(`${BASE_URL}/recipes`);
+        let data = await res.json();
+        if (query) {
+          const lowerQuery = query.toLowerCase();
+          data = data.filter(recipe =>
+            recipe.name.toLowerCase().includes(lowerQuery) ||
+            recipe.ingredients.some(ing => ing.toLowerCase().includes(lowerQuery))
+          );
+        }
+        displayRecipes(data);
+      } catch (err) {
+        recipesContainer.innerHTML = "<p style='color:red;'>⚠️ Failed to load recipes. Please check API.</p>";
       }
-      displayRecipes(data);
     }
 
     function displayRecipes(recipes) {
@@ -228,7 +199,7 @@
 
     function deleteRecipe(id) {
       if (confirm("Are you sure you want to delete this recipe?")) {
-        fetch(`http://localhost:3000/recipes/${id}`, { method: "DELETE" })
+        fetch(`${BASE_URL}/recipes/${id}`, { method: "DELETE" })
           .then(() => fetchRecipes(searchBox.value.trim()));
       }
     }

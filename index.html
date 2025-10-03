@@ -382,6 +382,8 @@
   </footer>
 
   <script>
+    const API_URL = "https://dishdesigner-recipebook-tgoq.vercel.app";
+
     // Modal controls
     function openLogin() { document.getElementById("loginModal").style.display = "flex"; }
     function closeLogin() { document.getElementById("loginModal").style.display = "none"; }
@@ -398,7 +400,7 @@
       if (event.target == registerModal) { registerModal.style.display = "none"; }
     }
 
-    // Handle Login
+    // ✅ Handle Login
     document.getElementById("loginForm").addEventListener("submit", async function(e) {
       e.preventDefault();
 
@@ -406,14 +408,13 @@
       let password = document.getElementById("loginPassword").value;
 
       try {
-        let res = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
+        let res = await fetch(`${API_URL}/users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
         let users = await res.json();
 
         if (users.length > 0) {
           let user = users[0];
           alert("Welcome " + user.username);
 
-          // Save without expiry
           localStorage.setItem("loggedInUser", JSON.stringify(user));
           updateAuthButtons();
 
@@ -430,7 +431,7 @@
       }
     });
 
-    // Handle Register
+    // ✅ Handle Register
     document.getElementById("registerForm").addEventListener("submit", async function(e) {
       e.preventDefault();
 
@@ -453,7 +454,7 @@
       };
 
       try {
-        await fetch("http://localhost:3000/users", {
+        await fetch(`${API_URL}/users`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newUser)
@@ -467,10 +468,7 @@
       }
     });
 
-    const searchInput = document.getElementById("searchInput");
-    const searchBtn = document.getElementById("searchBtn");
-
-    // ✅ Login check (no expiry, stays logged in until logout)
+    // ✅ Login state check
     function isUserLoggedIn() {
       return !!localStorage.getItem("loggedInUser");
     }
@@ -490,7 +488,10 @@
       window.location.href = "index.html";
     }
 
-    // Handle search
+    // ✅ Search
+    const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
+
     function handleSearch() {
       const query = searchInput.value.trim();
       if (!query) {
@@ -506,7 +507,12 @@
       }
     }
 
-    // Categories navigation with login check
+    searchBtn.addEventListener("click", handleSearch);
+    searchInput.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") handleSearch();
+    });
+
+    // ✅ Categories navigation
     function goToCategories() {
       if (!isUserLoggedIn()) {
         alert("Please login/register to explore categories!");
@@ -515,12 +521,6 @@
       }
       window.location.href = "categories.html";
     }
-
-    // Events
-    searchBtn.addEventListener("click", handleSearch);
-    searchInput.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") handleSearch();
-    });
 
     // On load update button state
     updateAuthButtons();

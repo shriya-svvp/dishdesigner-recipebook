@@ -103,7 +103,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="index.html#about">AboutUs</a>
-      <a href="index,html#contact">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
     <input type="text" id="searchBox" placeholder="Search recipes..." class="search-box">
   </header>
@@ -167,8 +167,11 @@
     document.querySelector("h2").textContent = "All Recipes";
   }
 
+  // ✅ Use your live backend URL
+  const BASE_URL = "https://dishdesigner-recipebook-tgoq.vercel.app/recipes";
+
   async function fetchRecipes(query = "") {
-    let url = "http://localhost:3000/recipes";
+    let url = BASE_URL;
     if (category) {
       url += `?type=${category}`;
     }
