@@ -32,6 +32,27 @@
       "email": "keerthi@gmail.com",
       "password": "keerthi123",
       "role": "user"
+    },
+    {
+      "id": "45aa",
+      "username": "ruchitha",
+      "email": "ruchitha@gmail.com",
+      "password": "ruchu12",
+      "role": "user"
+    },
+    {
+      "id": "5416",
+      "username": "ruchitha",
+      "email": "ruchitha@gmail.com",
+      "password": "ruchu123",
+      "role": "user"
+    },
+    {
+      "id": "274d",
+      "username": "liki",
+      "email": "liki@gmail.com",
+      "password": "liki12",
+      "role": "user"
     }
   ],
   "recipes": [
@@ -140,7 +161,6 @@
       ],
       "image": "images/nonveg/fish-curry.jpg"
     },
-
     {
       "id": "5",
       "name": "Aloo Gobi",
@@ -280,7 +300,6 @@
       ],
       "image": "images/veg/veg machurian.jpg"
     },
-
     {
       "id": "11",
       "name": "Mutton Rogan Josh",
